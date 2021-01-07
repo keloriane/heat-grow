@@ -1,0 +1,86 @@
+.philosophy {
+	width: 100vw;
+
+	position: relative;
+	.info-container {
+		background-color: $main-color;
+		max-width: 1000px;
+		width: 100%;
+		padding: 94px 40px 130px 140px;
+
+		.inner-text {
+			max-width: 755px;
+			width: 100%;
+			margin: auto;
+			.text-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: $gap;
+				.text-block {
+					width: 340px;
+					color: white;
+					margin-top: 75px;
+					p {
+
+						font-style: normal;
+						font-weight: 300;
+						font-size: 20px;
+						line-height: 130%;
+						/* or 26px */
+						color: white;
+						letter-spacing: 0.01em;
+					}
+
+				}
+			}
+		}
+
+	}
+
+	.background-layer {
+		svg	{
+			position: absolute;
+			bottom: -13%;
+			right: 10%;
+
+		}
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+#circle {
+	-webkit-animation: rotating 10s linear infinite;
+	-moz-animation: rotating 10s linear infinite;
+	-ms-animation: rotating 10s linear infinite;
+	-o-animation: rotating 10s linear infinite;
+	animation: rotating 10s linear infinite;
+}
+
+@media only screen and (max-width: 1060px) {
+	.philosophy {
+		.info-container {
+			padding: 20px;
+			.inner-text {
+				.text-container {
+					grid-template-columns: 1fr;
+					justify-items: center;
+				}
+			}
+		}
+	}
+}

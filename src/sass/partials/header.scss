@@ -2,18 +2,22 @@ main {
 	.hero-header {
 		width: 100vw;
 		height: 100vh;
-
+		display: grid;
+		align-items: center;
 		.main-header {
-			width: 980px;
+			max-width: 980px;
+			width: 100%;
+
 			margin: 0 auto;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 24px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 24px;
 			.header-text {
 				display: flex;
 				align-items: center;
 				flex-direction: column;
 				justify-content: center;
+
 				h2 {
 					font-style: normal;
 					font-weight: bold;
@@ -44,6 +48,8 @@ main {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 24px;
+			max-width: 565px;
+			width: 100%;
 			.left-blocks {
 				display: grid;
 				grid-template-rows: 1fr 1fr;
@@ -83,6 +89,7 @@ main {
 				display: flex;
 				align-items: flex-end;
 				position: relative;
+				width: 270px;
 				img {
 					position: absolute;
 					bottom: -6%;
@@ -93,4 +100,43 @@ main {
 		}
 
 	}
+}
+
+@media only screen and (max-width: 1060px) {
+		main {
+			.hero-header {
+				.main-header {
+
+					grid-template-columns: 1fr;
+					.header-blocks {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+}
+@media only screen and (max-width: 590px) {
+		main {
+			.hero-header {
+				.main-header {
+
+					.header-blocks {
+						grid-template-columns: 1fr;
+						.left-blocks {
+							justify-items: center;
+						}
+						.main-block {
+							display: none;
+						}
+
+
+					}
+				}
+			}
+		}
+}
+.header-span {
+	display: block;
+	overflow: hidden;
+	height: 50px;
 }

@@ -1,6 +1,23 @@
 .about {
-	width: 960px;
-	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	margin: 65px auto;
+	position: relative;
+
+	.grey-background {
+		width: 100vw;
+		height: 150vh;
+		position: absolute;
+		background-color: #f4f4f4;
+		left: -117px;
+		top: -64%;
+		z-index: -1;
+	}
+svg {
+	position: absolute;
+	bottom: -111px;
+	right: -155px;
+}
 
 	.title-container {
 		.emphase {
@@ -27,7 +44,8 @@
 
 	.section-text-container {
 
-		width: 830px;
+		max-width: 830px;
+		width: 100%;
 		margin: 56px auto;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -63,4 +81,37 @@
 
 	}
 
+}
+@media only screen and (max-width: 970px) {
+
+	.about {
+
+		.section-text-container {
+			grid-column-gap: 34px;
+		}
+	}
+}
+
+@media only screen and (max-width: 830px) {
+	.title-container {
+		margin: auto;
+		max-width: 520px;
+		width: 100%;
+	}
+
+	.about {
+
+		.section-text-container {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+
+	}
+	.background-layer {
+		display: none;
+	}
+	.about .section-text-container div.right-gap-text p {
+		position: relative;
+		top: 0;
+	}
 }

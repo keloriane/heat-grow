@@ -1,5 +1,6 @@
 body  {
 	font-family: "Calibre" , sans-serif;
+	overflow-x:hidden;
 }
 
 
@@ -13,4 +14,74 @@ p {
 
 .orangered {
 	color: $orange;
+}
+
+.title-container {
+	.emphase {
+		h4 {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 100%;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: $main-color;
+			&.white {
+				color: white;
+			}
+		}
+	}
+	.section-title {
+		margin-top: 36px;
+		h2 {
+			font-size: 64px;
+			font-weight: 700;
+			text-transform: uppercase;
+			&.white {
+				color: white;
+			}
+		}
+	}
+
+}
+
+@media only screen and (max-width: 830px) {
+
+	.title-container {
+		.emphase {
+			h4 {
+
+
+			}
+		}
+		.section-title {
+
+			h2 {
+				font-size: 40px;
+
+			}
+		}
+
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	.title-container {
+		width: 326px;
+		.emphase {
+			h4 {
+
+
+			}
+		}
+		.section-title {
+
+			h2 {
+				font-size: 40px;
+
+			}
+		}
+
+	}
 }

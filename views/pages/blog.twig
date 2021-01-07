@@ -1,0 +1,36 @@
+{% extends getf('base') %}
+{% import getf('button') as button %}
+
+{% block body %}
+
+<section id="blog" data-barba="container" data-barba-namespace="blog" >
+    <div class="info-section-container">
+        <div class="title-wrapper">
+            <div class="green-square">
+
+            </div>
+            <div class="title-container">
+                <div class="section-title">
+                    <h2>tutoriels <br> & articles <span class="orangered">.</span> </h2>
+                </div>
+            </div>
+            <div class="subtitle-container">
+                <h4>
+                    Heat & Grow vous offres ses tutoriels, ainsi ques des articles gratuits afin de vous aider à comprendre le fonctionnement de vos appareils.                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="article-list" style="
+
+        background-image: url({{ images.pipe }});
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        ">
+        <div class="layer">
+
+        </div>
+    </div>
+</section>
+{% endblock %}

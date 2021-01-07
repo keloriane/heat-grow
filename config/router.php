@@ -1,15 +1,18 @@
 <?php
 
 Routes::map('/', function($params){
-	Routes::load('pages/index.php');
+	Routes::load('pages/home.php');
 });
 
 Routes::map('/about', function($params){
 	Routes::load('pages/about.php');
 });
 
-Routes::map('/example', function($params){
-	Routes::load('pages/example.php');
+Routes::map('/services', function($params){
+	Routes::load('pages/services.php');
+});
+Routes::map('/articles', function($params){
+	Routes::load('pages/blog.php');
 });
 
 
