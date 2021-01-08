@@ -1,5 +1,5 @@
 <?php
-/*** Template Name: About Page*/
+/*** Template Name: About-Page*/
 
 $context = Timber::context();
 $mainImage = Picz::get('pic.jpg');

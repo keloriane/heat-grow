@@ -29,7 +29,25 @@
         background-repeat: no-repeat;
         ">
         <div class="layer">
+            <ul class="article-list">
+            {% for post in posts  %}
+                         <li class="article-items">
+                             <div class="date">
+                                 <p>
+                                     {{ post.date }}
+                                 </p>
+                             </div>
+                             <a href="{{ post.link }}">
+                                {{ post.title }}
+                             </a>
+                             <br>
+                             <a class="link-underline"  href="{{ post.link }}">
+                                 Lire l'article <span class="orangered">.</span>
+                             </a>
+                         </li>
+            {% endfor %}
 
+            </ul>
         </div>
     </div>
 </section>
